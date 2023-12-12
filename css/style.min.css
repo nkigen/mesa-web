@@ -704,6 +704,37 @@ ul, ol {
     padding: 15px;
     display: inline-block;
     position: absolute; }
+
+    .post-card .post-card__featured-imageh3, .post_featured .post-card__featured-image {
+      height: 300px;
+                                  width: auto;
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+              background-size: 100% contain;
+      background-position: center center;
+      background-image: url(../images/gothia6.jpg); }
+
+      .post-card .post-card__featured-imageh2, .post_featured .post-card__featured-image {
+        height: 300px;
+                                    width: auto;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+                background-size: 100% contain;
+        background-position: center center;
+        background-image: url(../images/gothia1.jpg); }
+
+        .post-card .post-card__featured-imageh1, .post_featured .post-card__featured-image {
+          height: 300px;
+                                      width: auto;
+          background-color: #ffffff;
+          background-repeat: no-repeat;
+          -webkit-background-size: contain;
+                  background-size: 100% contain;
+          background-position: center center;
+          background-image: url(../images/gothia9.jpg); }
+
   .post-card .post-card__featured-image, .post_featured .post-card__featured-image {
     height: 300px;
                                 width: auto;
@@ -713,7 +744,36 @@ ul, ol {
             background-size: 100% contain;
     background-position: center center;
     background-image: url(../images/lo.jpg); }
-    
+
+    .post-card .post-card__featured-imageb1, .post_featured .post-card__featured-image {
+      height: 300px;
+                                width: auto;
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+              background-size: 100% contain;
+      background-position: center center;
+      background-image: url(../images/gothia7.jpg); }
+
+      .post-card .post-card__featured-imageb2, .post_featured .post-card__featured-image {
+        height: 300px;
+                                  width: auto;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+                background-size: 100% contain;
+        background-position: center center;
+        background-image: url(../images/gothia8.jpg); }
+
+        .post-card .post-card__featured-imageb3, .post_featured .post-card__featured-image {
+          height: 300px;
+                                    width: auto;
+          background-color: #ffffff;
+          background-repeat: no-repeat;
+          -webkit-background-size: contain;
+                  background-size: 100% contain;
+          background-position: center center;
+          background-image: url(../images/gothia10.jpg); }
 
     .post-card .post-card__featured-image1, .post_featured .post-card__featured-image {
       height: 300px;
@@ -939,12 +999,12 @@ ul, ol {
     min-height: 500px;
     padding-top: 50px;
     width: 100%;
-    background-color: #2980b8;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
             background-size: cover;
     background-position: center center;
-    background-image: url(../images/face.JPG); }
+    background-image: url(../images/logo1.jpg); }
   .post_featured .post_featured__details {
     text-align: center;
     line-height: 1.5rem; }
@@ -1300,13 +1360,14 @@ ul, ol {
     line-height: 1;
     font-size: 2rem;
     font-family: inherit;
-    letter-spacing: -0.1rem;
+    letter-spacing: 0.1rem;
     text-align: center;
-    padding-top: 50px 16px; }
+    padding-top: 0px; }
 
 @media (min-width: 768px) {
   #above-the-fold {
-    height: 500px; }
+    height: 500px;
+     }
     #above-the-fold > .container_wrapper {
       z-index: 3;
       position: relative;
@@ -1327,7 +1388,8 @@ ul, ol {
 
 @media (min-width: 960px) {
   h1#above-the-fold__description {
-    white-space: pre-line; } }
+    white-space: pre-line;
+  } }
 
 #latest-review {
   position:sticky;
