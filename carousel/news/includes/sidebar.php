@@ -53,25 +53,41 @@
       </div>
    </div>
    <h5 class="card-header border-0 bg-transparent">Most Popular</h5>
-   <!--
+   
    <div class="card my-4 border-0">
-      <div class="card-body p-2">
-        <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/6E6JPsLOABQ" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+   <div class="card-body p-2">
+      <video width="320" height="240" controls>
+  <source src="lichuma.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+  </div>
+   </div>
+   <div class="card my-4 border-0">
+   <div class="card-body p-2">
+      <video width="320" height="240" controls>
+  <source src="lichuma.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+  </div>
    </div>
    <div class="card my-4 border-0">
       <div class="card-body p-2">
-        <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/HNekjkJgb7g" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <video width="320" height="240" controls>
+  <source src="lichuma.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+  </div>
    </div>
    <div class="card my-4 border-0">
       <div class="card-body p-2">
-        <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/Ll8Bw8lcecw" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <video width="320" height="240" controls>
+  <source src="lichuma.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+  </div>
    </div>
-   <div class="card my-4 border-0">
-      <div class="card-body p-2">
-        <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/gz73OAg2Tr0" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-   </div>
-</div> -->
+</div> 
