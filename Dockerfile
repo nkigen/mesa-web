@@ -1,12 +1,24 @@
+# Use an official PHP runtime as a parent image
+FROM php:7.4-apache
 
-# Use the official nginx image as the base image
-FROM nginx
+# Set the working directory to /var/www/html
+WORKDIR /var/www/html
 
-# Copy the contents of the repository to the nginx document root directory
-COPY . /usr/share/nginx/html
+# Copy the current directory contents into the container at /var/www/html
+COPY . /var/www/html
 
-# Expose port 80 for nginx
+# Install any dependencies your PHP project requires
+# For example, if you need MySQLi extension
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
+
+# Copy the Apache vhost file
+COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+
+# Expose port 80 for Apache
 EXPOSE 80
 
-# Set the entrypoint to start nginx when the container starts
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# Start Apache in the foreground
+CMD ["apache2-foreground"]
