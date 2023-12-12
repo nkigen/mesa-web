@@ -6,7 +6,7 @@ WORKDIR /var/www/html
 
 # Install necessary extensions and dependencies
 RUN apt-get update \
-    && apt-get install -y nginx \
+    && apt-get install -y nginx php-fpm \
     && docker-php-ext-install mysqli pdo pdo_mysql \
     && rm -rf /var/lib/apt/lists/*
 
@@ -20,4 +20,4 @@ COPY . /var/www/html
 EXPOSE 80
 
 # Start PHP-FPM and Nginx
-CMD service php7.4-fpm start && nginx -g "daemon off;"
+CMD service php-fpm start && nginx -g "daemon off;"
