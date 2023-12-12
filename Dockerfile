@@ -1,22 +1,12 @@
-FROM php:8.1-fpm
 
-# Install dependencies
-RUN apt-get update && apt-get install -y libzip-dev libcurl3-dev libpng-dev libonig-dev libxml2-dev
+# Use the official nginx image as the base image
+FROM nginx
 
-# Install mysqli extension
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Copy the contents of the repository to the nginx document root directory
+COPY . /usr/share/nginx/html
 
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
-
-# Copy application files
-COPY . /var/www/html
-
-# Configure Nginx
-RUN cp /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/app.conf
-RUN sed -i 's/8080/80/g' /etc/nginx/conf.d/app.conf
-
+# Expose port 80 for nginx
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+# Set the entrypoint to start nginx when the container starts
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
