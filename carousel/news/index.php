@@ -70,7 +70,7 @@
                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="card-title text-decoration-none text-dark">
                               <h5 class="card-title"><?php echo htmlentities($row['posttitle']);?></h5>
                            </a>
-                           <!-- <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="">Read More &rarr;</a> -->
+                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="">Read More &rarr;</a> 
                            
                         </div>
                      </div>
