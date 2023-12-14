@@ -21,7 +21,7 @@
     $msg="Comment approved";
    }
    
-n
+
    if($_GET['action']=='del' && $_GET['rid'])
    {
     $id=intval($_GET['rid']);
