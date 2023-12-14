@@ -27,20 +27,434 @@
           font-size: 3.5rem;
         }
       }
-    </style> 
+      
+      @import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
+.about {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.2s ease;
+}
+.about .bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  backdrop-filter: blur(5px);
+  position: absolute;
+}
+.about .logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
+}
+.about .social {
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+}
+.about .social .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  display: flex;
+  transition: all 0.2s ease, background-color 0.4s ease;
+  opacity: 0;
+  border-radius: 100%;
+}
+.about .social.portfolio {
+  transition: all 0.8s ease;
+}
+.about .social.portfolio .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
+}
+.about .social.dribbble {
+  transition: all 0.3s ease;
+}
+.about .social.dribbble .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
+}
+.about .social.linkedin {
+  transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
+}
+.about:hover {
+  width: 105px;
+  height: 105px;
+  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+.about:hover .social {
+  opacity: 1;
+}
+.about:hover .social .icon {
+  opacity: 0.9;
+}
+.about:hover .social:hover {
+  background-size: 28px;
+}
+.about:hover .social:hover .icon {
+  background-size: 65%;
+  opacity: 1;
+}
+.about:hover .social.portfolio {
+  right: 0;
+  bottom: calc(100% - 40px);
+  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio .icon:hover {
+  background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+  bottom: 45%;
+  right: 45%;
+  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble .icon:hover {
+  background-color: #0077b5;
+}
+.about:hover .social.linkedin {
+  bottom: 0;
+  right: calc(100% - 40px);
+  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+  background-color: #0077b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.mainNav {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ae9191;
+  text-transform: uppercase;
+  padding: 0 40px;
+}
+@media screen and (max-width: 799px) {
+  .mainNav {
+    padding: 0 20px;
+  }
+}
+.mainNav__logo {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.mainNav__links {
+  display: flex;
+}
+@media screen and (max-width: 799px) {
+  .mainNav__links {
+    display: none;
+  }
+}
+.mainNav__link {
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-left: 20px;
+  font-weight: 600;
+  box-shadow: inset 0px -10px 0px rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease, transform 0.2s ease;
+  padding: 2px 4px;
+  transform: translateY(0px);
+}
+.mainNav__link:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0px -20px 0px white;
+}
+.mainNav__icon {
+  background-image: url(../images/mighty.png);
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+@media screen and (max-width: 799px) {
+  .mainNav__icon {
+    display: block;
+  }
+}
+
+.mainHeading {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 40px;
+  background-image: linear-gradient(to top, #e4e4e4 0%, #e7f0fd 100%);
+}
+@media screen and (max-width: 799px) {
+  .mainHeading {
+    padding: 0 20px;
+  }
+}
+.mainHeading__content {
+  max-width: 1110px;
+  min-height: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 799px) {
+  .mainHeading__content {
+    min-height: 500px;
+  }
+}
+.mainHeading__text {
+  z-index: 1;
+  color: #940000;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  max-width: 620px;
+  margin-top: 100px;
+  width: 70%;
+  backdrop-filter: blur(8px);
+  animation: text 0.8s 0.6s ease backwards;
+  position: relative;
+}
+.mainHeading__text:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  animation: line 0.8s 0.6s ease backwards;
+}
+@keyframes line {
+  0% {
+    right: 0;
+    width: 100%;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 799px) {
+  .mainHeading__text {
+    padding: 20px;
+    margin: 90px 0 40px 0;
+  }
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+.mainHeading__preTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  color: #940000
+}
+.mainHeading__title {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  color: #940000
+}
+@media screen and (max-width: 799px) {
+  .mainHeading__title {
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+}
+.mainHeading__description {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 26px;
+}
+@media screen and (max-width: 799px) {
+  .mainHeading__description {
+    font-size: 14px;
+  }
+}
+.mainHeading__image {
+  right: 0;
+  max-width: 600px;
+  width: 60%;
+  height: 600px;
+  transform: translatey(100px);
+  position: absolute;
+  overflow: hidden;
+  animation: image 0.6s 0.2s ease backwards;
+}
+@media screen and (max-width: 799px) {
+  .mainHeading__image {
+    height: 480px;
+    width: 70%;
+    transform: translatey(80px);
+    right: -6%;
+  }
+}
+@keyframes image {
+  0% {
+    opacity: 0;
+    transform: translatey(200px);
+  }
+}
+.mainHeading__image:before, .mainHeading__image:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 100%;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  opacity: 1;
+  left: 0;
+}
+.mainHeading__image:before {
+  animation: imageBefore 1s 0.2s ease backwards;
+}
+@keyframes imageBefore {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+}
+.mainHeading__image:after {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  height: 100%;
+  top: 0;
+  opacity: 0.2;
+}
+.mainHeading__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.cta {
+  padding: 16px 32px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(99, 116, 152, 0.4);
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 32px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 0px rgba(99, 116, 152, 0.2);
+  transition: all 0.4s ease;
+}
+.cta:hover {
+  border: 1px solid rgba(99, 116, 152, 0.1);
+  box-shadow: inset 0px -80px 0px rgba(99, 116, 152, 0.1);
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 799px) {
+  .cta {
+    margin-top: 16px;
+  }
+}
+    </style>
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
     
     <header>
-      <div style="text-align:center; padding-top:10px; padding-bottom:10px; height:fit-content;">
+      <div style="text-align:center; padding-top:0px;  height:auto;">
         <a  href="#" style="color: chartreuse; font-size:2rem; padding-left: 0px;">Mighty Eagles F.C/ Soccer Academy</a>
       </div>
       
     </header>
     <main role="main">
-    
+      <div class="about">
+        <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
+           <span class="icon"></span>
+        </a>
+        <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
+           <span class="icon"></span>
+        </a>
+        <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+           <span class="icon"></span>
+        </a>
+        <a class="bg_links logo"></a>
+     </div>
+     <!-- end about -->
+     
+     <nav class="mainNav">
+        <div class="mainNav__logo"><a href="../carousel/news/index.php" class="mainNav__link">Our Blog</a></div>
+        <div class="mainNav__logo"><a href="../carousel/blog/index.php" class="mainNav__link">News Letter</a></div>
+        <div class="mainNav__logo"><a href="../contact/blog.html" class="mainNav__link">Contacts</a></div>
+        <div class="mainNav__logo"><a href="../developer/Lichuma/index.html" class="mainNav__link">Admin</a></div>
+       
+     </nav>
+     <header class="mainHeading">
+        <div class="mainHeading__content">
+           <article class="mainHeading__text">
+              <p class="mainHeading__preTitle">Empowering the youth through talent</p>
+              <h2 class="mainHeading__title">MESA</h2>
+              <p class="mainHeading__description">
+                All are welcomed</p>
+              <button class="cta" ><a href="news/index.php">know more</a> </button>
+           </article>
+     
+           <figure class="mainHeading__image">
+              <img
+                 src="images/mighty.png"
+                 alt=""
+              />
+           </figure>
+        </div>
+     </header>
       <section class="jumbotron text-center">
         <div class="container-fluid">
           <!--<h1 style="color: brown;">Mighty Eagles Photo Gallery</h1>-->
@@ -74,1403 +488,7 @@
     
           <div class="row">
 
-            
-<!--
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c40.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c40.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c39.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c39.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c38.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c38.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c37.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c36.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c36.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c36.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c35.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c35.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c34.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c34.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c33.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c33.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c32.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c32.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c31.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c31.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c30.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c30.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c29.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c29.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c28.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c28.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c27.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c27.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c26.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c26.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c25.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c25.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c24.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c24.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c23.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c23.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c22.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c22.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c21.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c21.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c20.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c20.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c19.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c19.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c18.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c18.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div> 
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c17.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c17.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c16.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c16.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c15.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c15.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c14.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c14.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c13.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c13.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c12.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c12.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c11.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c11.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c10.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c10.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c9.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c9.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c8.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c8.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c7.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c7.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c6.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c6.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c5.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c5.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c4.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c4.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c3.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c3.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c2.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c2.jpg">View</a></button>
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/c1.jpg" >
-                <title>Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;"> Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/c1.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">1 min ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img"  width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia14.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia14.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia6.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia6.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia10.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia10.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia11.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia11.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia3.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia3.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia1.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia1.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia2.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia2.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia5.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia5.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia4.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia4.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia12.JPG" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia12.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/gothia15.jpg" >
-                <title>Gothia Cup In Sweden</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Gothia Cup In Sweden</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/gothia15.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/a2.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/a2.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b1.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b1.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b4.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b4.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b5.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b5.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b3.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b3.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b2.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b2.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b7.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b7.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b6.JPG" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b6.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/b8.jpg" >
-                <title>Bikeke Friendlies</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Bikeke Friendlies</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/b8.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/17.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/17.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/16.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/16.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/15.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/15.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/14.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/14.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/13.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/13.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/12.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/12.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/11.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/11.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">3 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/10.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/10.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">4 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/9.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/9.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/8.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/8.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/7.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/7.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/6.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/6.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/5.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/5.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/4.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/4.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/3.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/3.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/2.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/2.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="380" height="420" rect width="auto" height="100%" fill="#55595c" src="images/1.JPG" >
-                <title>Joseph Kang'ethu's Memorial Cup</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Joseph Kang'ethu's Memorial Cup</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="images/1.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="360" rect width="auto" height="100%" fill="#55595c" src="../images/2.jpg" >
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/2.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="380" rect width="auto" height="100%" fill="#55595c" src="../images/3.jpg" >
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/3.JPG">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-           
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="280" rect width="auto" height="100%" fill="#55595c" src="../images/kipu.jpg" >
-                <title>Placeholder</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Scholarship Grant</text>
-                <div class="card-body">
-                  <p class="card-text" style=" color:black;">Kipu poses for a photo at St Josephs Highschool as he is awarded a full scholarship at the prestigious national school at the beginning of this year</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/kipu.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="350" rect width="auto" height="100%" fill="#55595c" src="../images/7.jpg" >
-                <title>Training</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Training Session</text>
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/7.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="350" rect width="auto" height="100%" fill="#55595c" src="../images/logo6.jpg" >
-                <title>Training</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Training Session</text>
-                 <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/logo6.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="350" rect width="auto" height="100%" fill="#55595c" src="../images/9.jpg" >
-                <title>Training</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Training Session</text>
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/9.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-2 shadow-sm">
-                <img class="bd-placeholder-img" width="350" height="300" rect width="auto" height="100%" fill="#55595c" src="../images/logo4.jpg" >
-                <title>Training</title><rect width="auto" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em" style="padding-left:1.1rem; color:black;">Training Session</text>
-                <div class="card-body">
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" ><a href="../images/logo4.jpg">View</a></button>
-                      
-                    </div>
-                    <small class="text-muted">9 mins ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-           
-            
-          </div>
-        </div>
-      </div>
-    -->
+ 
     </main>
 
     
@@ -1539,8 +557,10 @@
         
         
       </div>
+      <div class="clearfix"></div>
     </footer>
-  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   
