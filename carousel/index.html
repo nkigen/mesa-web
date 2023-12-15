@@ -57,7 +57,7 @@
   width: 40px;
   height: 40px;
   z-index: 9;
-   background-image: url(https://www.linkeramsley-lichuma-din.com/in/2b9186260/);
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: 10px 7px;
@@ -87,13 +87,19 @@
   transition: all 0.8s ease;
 }
 .about .social.portfolio .icon {
-  background-image: url(https://www.instagram.com/lichuma_ramsley/);
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
 }
 .about .social.dribbble {
   transition: all 0.3s ease;
 }
 .about .social.dribbble .icon {
   background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
+}
+.about .social.linkedin {
+  transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
 }
 .about:hover {
   width: 105px;
@@ -323,7 +329,7 @@ body {
   right: 0;
   max-width: 600px;
   width: 60%;
-  height: relative;
+  height: 600px;
   transform: translatey(100px);
   position: absolute;
   overflow: hidden;
@@ -364,13 +370,13 @@ body {
 }
 .mainHeading__image:after {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-  height: auto%;
+  height: 100%;
   top: 0;
   opacity: 0.2;
 }
 .mainHeading__image img {
   width: 100%;
-  height: relative;
+  height: 100%;
 }
 
 .cta {
@@ -405,7 +411,7 @@ body {
     
     <header>
       <div style="text-align:center; padding-top:0px;  height:auto;">
-        <a  href="#" style="color: chartreuse; font-size:2rem; padding-left: 0px;">Mighty Eagles F.C/ Soccer Academy</a>
+        <a  href="#" style="color: chartreuse; font-size:2rem; padding-left: 0px;">Mighty Eagles Soccer Academy</a>
       </div>
       
     </header>
@@ -425,8 +431,8 @@ body {
      <!-- end about -->
      
      <nav class="mainNav">
-        <div class="mainNav__logo"><a href="../carousel/news/index.php" class="mainNav__link">Blogsite</a></div>
-        <div class="mainNav__logo"><a href="../carousel/blog/index.html" class="mainNav__link">News</a></div>
+        <div class="mainNav__logo"><a href="../carousel/news/index.php" class="mainNav__link">Our Blog</a></div>
+        <div class="mainNav__logo"><a href="../carousel/blog/index.html" class="mainNav__link">News Letter</a></div>
         <div class="mainNav__logo"><a href="../contact/blog.html" class="mainNav__link">Contacts</a></div>
         <div class="mainNav__logo"><a href="../developer/Lichuma/index.html" class="mainNav__link">Admin</a></div>
        
@@ -442,8 +448,8 @@ body {
            </article>
      
            <figure class="mainHeading__image">
-              <img style="width:100%;height:auto;"
-                 src="images/lo.jpg"
+              <img
+                 src="images/mighty.png"
                  alt=""
               />
            </figure>
@@ -451,27 +457,25 @@ body {
      </header>
       <section class="jumbotron text-center">
         <div class="container-fluid">
-          <!--<h1 style="color: brown;">Mighty Eagles Photo Gallery</h1>-->
-        </br>
-      </br>
-    </br>
-  </br>
-</br>
-          <p style="color: rgb(0, 0, 0); letter-spacing: 5px; line-height: 1.8; font-weight: bold;  font-family: 'Times New Roman', Times, serif; font-size: 1.8rem;">This is the official Mighty Eagles Soccer Academy website . We are located at JKUAT fomerly Robinsons Academy in Kitale, Trans-Nzoia county. We offer Football training on weekends as fron 2:00 pm to 5:30 pm. Come join us if you have what it takes to be an Eagle</p>
-        </br>
-      </br>
-    </br>
-  </br>
-</br>
-          <p>
-            <a href="news/index.php" class="btn btn-primary my-2">Visit our blog</a>
-            
+          
+<div class="clearfix"></div>
+<div class="container_wrapper">
+<section class="above-the-fold">
+  <h1 id="above-the-fold__description" style="color: black;">
+          This is the official Mighty Eagles Soccer Academy website . We are located at JKUAT fomerly Robinsons Academy in Kitale, Trans-Nzoia county. We offer Football training on weekends as fron 2:00 pm to 5:30 pm. Come join us if you have what it takes to be an Eagle
+       </h1>
+               
+          <h1 id="above-the-fold__description" style="color: black; padding-top: 30px; margin-bottom: 0%;">
+                    <a href="news/index.php" class="btn btn-primary my-2">Visit our blog</a>
+                  </h1>
           </p>
         </br>
       </br>
     </br>
   </br>
 
+         
+</section>
 
 
         </div>
@@ -489,7 +493,7 @@ body {
     <div class="clearfix"></div>
     <footer class="footer">
       <div class="footer__addr">
-        <h1 class="footer__logo">MESA</h1>
+        <h1 class="footer__logo">Eagles Center</h1>
             
         <h2 class="nav__title">Location</h2>
         
