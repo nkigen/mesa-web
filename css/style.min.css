@@ -1358,11 +1358,13 @@ ul, ol {
     height:fit-content; }
   #above-the-fold h1#above-the-fold__description {
     line-height: 1;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: inherit;
     letter-spacing: 0.1rem;
     text-align: center;
-    padding-top: 0px; }
+    padding-top: 10px;
+    padding-bottom:10px : 
+   }
 
 @media (min-width: 768px) {
   #above-the-fold {
