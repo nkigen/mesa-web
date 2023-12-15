@@ -32,12 +32,12 @@
             
             <div class="col-md-12">
                <!-- Blog Post -->
-               <div class="row" style="width:100%;">
-                 
-                  <div class="col-md-7" style="margin-top: 0%;">
-                  <h4 class="widget-title mb-4">Today <span>on The Eagles</span></h4>
+
+               <div class="col-md-6" style="margin-top: 0%;">
+                  <h4 style="text-align:center;" class="widget-title mb-12">Today <span>on The Eagles</span></h4>
                   </div>
-                  <?php 
+               <div class="row" style="width:100%;">
+                                 <?php 
                      if (isset($_GET['pageno'])) {
                             $pageno = $_GET['pageno'];
                         } else {
@@ -58,7 +58,7 @@
                      ?>
                   <div class="col-md-6" >
                      <div class="card mb-4 border-0" >
-                        <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>" width="100%">
+                        <img class="card-img-top" href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>" width="100%">
                         <div class="card-body">
                            <p class="m-0">
                               <!--category-->
@@ -70,7 +70,7 @@
                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="card-title text-decoration-none text-dark">
                               <h5 class="card-title"><?php echo htmlentities($row['posttitle']);?></h5>
                            </a>
-                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="">Read More &rarr;</a> 
+                            <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>" class="">Read More &rarr;</a>
                            
                         </div>
                      </div>
