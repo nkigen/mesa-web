@@ -1,7 +1,4 @@
-<!--
-author: Ethredah
-author URL: http://ethredah.github.io
--->
+
 
 
 
