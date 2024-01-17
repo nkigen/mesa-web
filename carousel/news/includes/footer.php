@@ -19,15 +19,7 @@
                             </ul>
                         </div>
 
-                    <!--    <div class="col" class="center" >
-                           <ul class="float-left list-unstyled ">
-                            <p style="text-align:center; background-color:powderblue;">Management</p>                     
-                            <li class="mb-2 align-items-center"><a href="../news/admin" class="text-red" style="text-align:center">System Admin</a></li>
-                            <li class="mb-2 align-items-center"><a href="../news/admin" class="text-red" style="text-align:center">User Admin</a></li>
-                            </ul>
-                        </div>
-
-                      -->
+            
                        
                     </div>
                 </div>
