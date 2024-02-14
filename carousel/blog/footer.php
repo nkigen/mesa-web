@@ -6,7 +6,7 @@
 				<ul>
 					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Kitale, Kenya</li>
 					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:ramsleylichuma@gmail.com">ramsleylichuma@gmail.com</a></li>
-					<!-- <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +(254) 754 235 535</li> -->
+					<!-- <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0728825497</li> -->
 				</ul>
 		</div>
 		<div class="col-md-4 footer-left-agileinfo">
