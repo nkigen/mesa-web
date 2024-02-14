@@ -16,7 +16,7 @@
                <a class="nav-link" href="index.php"><i class="fa-newspaper-o fa"></i> News</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="contact-us.php"><i class="fa fa-phone"></i> Contact us</a>
+               <a class="nav-link" href="contact-us.php"><i class="fa fa-phone"></i> Contacts</a>
             </li>
         
             <li class="nav-item dropdown">
